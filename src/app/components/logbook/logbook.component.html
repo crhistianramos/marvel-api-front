@@ -1,0 +1,10 @@
+<h1>Bitacora de consultas</h1>
+
+<div class="log-entry-list-container">
+    <div *ngFor="let log of logs" class="log-entry-card">
+      <h3>{{ log.service }}</h3>
+      <p>Timestamp: {{ log.timestamp | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+      <p>Character ID: {{ log.characterId }}</p>
+    </div>
+  </div>
+  

@@ -9,12 +9,11 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { CharacterComponent } from './components/character/character.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
-import { CustomCurrencyPipe } from './pipes/custom-currency.pipe';
-import { TestNamePipe } from './pipes/test-name.pipe';
 import { ChangeColorDirective } from './directives/change-color.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupComponent } from './popup/popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { LogbookComponent } from './components/logbook/logbook.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +21,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     CatalogoComponent,
     CharacterComponent,
     NavBarComponent,
-    SideBarComponent,
-    CustomCurrencyPipe,
-    TestNamePipe,
+    SideBarComponent, 
     ChangeColorDirective,
     PopupComponent,
+    LogbookComponent,
   ],
   imports: [
     BrowserModule,

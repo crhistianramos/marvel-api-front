@@ -1,0 +1,25 @@
+.log-entry-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.log-entry-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+/* Estilos para pantalla grande */
+@media screen and (min-width: 768px) {
+  .log-entry-list-container {
+    justify-content: flex-start;
+  }
+
+  .log-entry-card {
+    width: 300px;
+  }
+}

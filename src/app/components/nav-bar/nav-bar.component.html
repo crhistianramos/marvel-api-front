@@ -1,16 +1,12 @@
 <header class="header">
     <div class="d-flex-mobile">
-        <a href="#" class="logo">CompanyLogo</a>
+        <a routerLink="/catalogo" class="logo">CompanyLogo</a>
         <div class="show-side-menu">
             <app-side-bar></app-side-bar>
         </div>
     </div>
     <div class="header-right hidde-menu">
-        <a href="#">Home</a>
-        <a class="active" href="#">Catalogo</a>
-        <a href="#">About</a>
-    </div>
-    <div class="count-items">
-        Cantidad Items con RxJS: {{ countItems }}
+        <a [routerLink]="'/catalogo'" class="active">Catalogo</a>
+        <a [routerLink]="'/logs'">Logs</a>
     </div>
 </header>
