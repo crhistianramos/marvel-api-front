@@ -6,6 +6,7 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { LogbookComponent } from './components/logbook/logbook.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/catalogo', pathMatch: 'full' },
   { path: 'catalogo', component: CatalogoComponent },
   { path: 'logs', component: LogbookComponent },
 ];
