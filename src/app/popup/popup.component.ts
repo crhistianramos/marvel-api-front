@@ -1,12 +1,13 @@
 // popup.component.ts
 
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewEncapsulation  } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-popup',
   templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.scss']
+  styleUrls: ['./popup.component.scss'],
+  encapsulation: ViewEncapsulation.None 
 })
 export class PopupComponent {
 

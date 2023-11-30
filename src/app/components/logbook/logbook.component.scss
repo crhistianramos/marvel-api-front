@@ -13,6 +13,19 @@
   width: 200px;
 }
 
+h1 {
+  font-family: Comic Sans MS;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  text-align: center; 
+}
+
 /* Estilos para pantalla grande */
 @media screen and (min-width: 768px) {
   .log-entry-list-container {
@@ -21,5 +34,10 @@
 
   .log-entry-card {
     width: 300px;
+  }
+
+  h1, h3 {
+    font-size: 1.5em; 
+    text-align: center;
   }
 }
