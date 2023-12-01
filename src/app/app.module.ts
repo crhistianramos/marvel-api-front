@@ -17,7 +17,7 @@ import { LogbookComponent } from './components/logbook/logbook.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
-import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
+import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
