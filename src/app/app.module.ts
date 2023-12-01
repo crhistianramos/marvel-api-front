@@ -17,6 +17,7 @@ import { LogbookComponent } from './components/logbook/logbook.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatTableModule } from '@angular/material/table';
     PopupComponent,
     LogbookComponent,
     LoginComponent,
+    ErrorDialogComponent,
   ],
   imports: [
     BrowserModule,
