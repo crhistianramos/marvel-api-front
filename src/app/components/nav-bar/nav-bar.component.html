@@ -1,12 +1,14 @@
+<!-- nav-bar.component.html -->
 <header class="header">
     <div class="d-flex-mobile">
-        <a routerLink="/catalogo" class="logo">Marvel-Api</a>
-        <div class="show-side-menu">
-            <app-side-bar></app-side-bar>
-        </div>
+      <a routerLink="/catalogo" class="logo">Marvel-Api</a>
+      <div class="show-side-menu">
+        <app-side-bar></app-side-bar>
+      </div>
     </div>
     <div class="header-right hidde-menu">
-        <a [routerLink]="'/catalogo'" class="active">Catalogo</a>
-        <a [routerLink]="'/logs'">Logs</a>
+      <a [routerLink]="'/catalogo'" [class.active]="currentRoute === '/catalogo'" (click)="navigateTo('/catalogo')">Catalogo</a>
+      <a [routerLink]="'/logs'" [class.active]="currentRoute === '/logs'" (click)="navigateTo('/logs')">Logs</a>
     </div>
-</header>
+  </header>
+  

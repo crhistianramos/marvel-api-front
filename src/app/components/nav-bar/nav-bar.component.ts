@@ -1,25 +1,33 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
- 
+// nav-bar.component.ts
+import { Component, OnDestroy } from '@angular/core';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { filter, takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnDestroy {
+  currentRoute: string = '';
+  private ngUnsubscribe = new Subject();
 
-  constructor(private router: Router) { }
-
-  navigateToCatalogo(): void {
-    console.log('Antes de navegar a Catalogo');
-    this.router.navigate(['/catalogo']);
-    console.log('Después de navegar a Catalogo');
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+      takeUntil(this.ngUnsubscribe)
+    ).subscribe((event: NavigationEnd) => {
+      this.currentRoute = event.urlAfterRedirects;
+    });
   }
 
-  navigateToLogs(): void {
-    console.log('Antes de navegar a Logs');
-    this.router.navigate(['/logs']);
-    console.log('Después de navegar a Logs');
+  navigateTo(path: string): void {
+    this.router.navigate([path]);
+  }
 
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 }
