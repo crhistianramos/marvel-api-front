@@ -1,20 +1,33 @@
+/* popup.component.scss */
+.popup-container {
+  max-height: 65vh;
+  margin: 0 auto; 
+  overflow-y: auto; 
+  padding: 0.5vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); 
+}
+
 .log-entry-list-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 20px;
+  margin-top: 20px; 
 }
 
 .log-entry-card {
+  background-color: #fff;
   border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
+
+}
+
+.log-entry-content {
   padding: 10px;
-  margin: 10px;
-  width: 200px;
 }
 
 h1 {
-  font-family: Comic Sans MS;
+  margin-bottom: 0;
+  font-family: Impact;
+  font-size: 3.5em;
   letter-spacing: 0px;
   word-spacing: 0px;
   color: #000000;
@@ -23,21 +36,11 @@ h1 {
   font-style: normal;
   font-variant: small-caps;
   text-transform: none;
-  text-align: center; 
-}
+  text-align: center;
 
-/* Estilos para pantalla grande */
-@media screen and (min-width: 768px) {
-  .log-entry-list-container {
-    justify-content: flex-start;
-  }
-
-  .log-entry-card {
-    width: 300px;
-  }
-
-  h1, h3 {
-    font-size: 1.5em; 
-    text-align: center;
-  }
+   background: linear-gradient(transparent 80%, red 80%);
+  background-clip: text;
+  -webkit-background-clip: text; 
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

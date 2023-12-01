@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupComponent } from './popup/popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LogbookComponent } from './components/logbook/logbook.component';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { LogbookComponent } from './components/logbook/logbook.component';
     ChangeColorDirective,
     PopupComponent,
     LogbookComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { LogbookComponent } from './components/logbook/logbook.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

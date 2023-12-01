@@ -1,8 +1,7 @@
-// logbook.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { LogService } from 'src/app/services/logbook.service';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-logbook',
@@ -11,11 +10,19 @@ import { Router } from '@angular/router';
 })
 export class LogbookComponent implements OnInit {
   logs: any[] = [];
+  isLoggedIn: boolean = false;
 
-  constructor(private logService: LogService, private router: Router) { }
+  constructor(private logService: LogService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    this.loadLogs();
+    this.checkLoginStatus();
+    
+    // Redirige al usuario al login si no está autenticado
+    if (!this.isLoggedIn) {
+      this.router.navigate(['/login']);
+    } else {
+      this.loadLogs();
+    }
   }
 
   loadLogs() {
@@ -29,9 +36,7 @@ export class LogbookComponent implements OnInit {
     );
   }
 
-
-navigateToCatalogo() {
-  this.router.navigate(['/catalogo']);
-}
-
+  checkLoginStatus() {
+    this.isLoggedIn = this.authService.getIsLoggedIn();
+  }
 }

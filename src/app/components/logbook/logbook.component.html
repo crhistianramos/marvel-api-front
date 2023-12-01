@@ -1,10 +1,15 @@
-<h1>Bitacora de consultas</h1>
-
+<!-- logbook.component.html -->
 <div class="log-entry-list-container">
-    <div *ngFor="let log of logs" class="log-entry-card">
-      <h3>{{ log.service }}</h3>
-      <p>Timestamp: {{ log.timestamp | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
-      <p>Character ID: {{ log.characterId }}</p>
-    </div>
-  </div>
-  
+  <ul>
+    <li *ngFor="let log of logs" class="log-entry-card">
+      <div class="log-entry-content">
+        <p>Servicio de proveniencia: {{ log.service }}</p>
+        <p>Fecha y hora de registro: {{ log.timestamp | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+        <p>Id personaje: {{ log.characterId }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- Muestra el componente de inicio de sesión solo si el usuario no ha iniciado sesión -->
+<app-login *ngIf="!isLoggedIn"></app-login>
