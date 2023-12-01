@@ -29,9 +29,9 @@ npm install
 ## Usage
 Describe how to use the project.
 
-bash
-Copy code
-ng serve
+- ng serve
+
+- abrir el navegador en localhost:4200
 
 ## Features
 
