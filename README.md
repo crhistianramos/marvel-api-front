@@ -1,27 +1,60 @@
-# MyStore
+# marvel-api-front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
+Angular project integrating Angular Material components, interacting with a local microservice providing Marvel character information. The microservice has two endpoints: one for fetching Marvel characters, displayed in the character catalog, and another for querying an individual character. The app also features an authentication module using JWT, storing the token until the page is refreshed. Once logged in, users can view a logbook of queries, including service name, date, and time. Optionally, the character ID is displayed if the query was made by clicking on a character card in the catalog.
 
-## Development server
+**Note**: Credentials are as follows:
+- Username: marvelAdmin
+- Password: secreto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+Aplicacion angular para consumir backend local de marvel-api
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Contents
 
-## Build
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Features](#features)
+4. [Contribution](#contribution)
+5. [License](#license)
+6. [Contact](#contact)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+Details on how to install the project. Include dependencies, specific steps, etc.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+npm install
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Usage
+Describe how to use the project.
 
-## Further help
+bash
+Copy code
+ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Features
+
+Marvel character catalog.
+Individual character query endpoint.
+JWT-based authentication.
+Logbook of queries with service name, date, and time.
+Optional display of character ID in the logbook.
+
+## Contribution
+
+Contributions to the project are welcome. Please follow these general guidelines:
+
+Fork the repository.
+Create a new branch for your feature/bugfix: git checkout -b feature-name.
+Make your changes and commit them: git commit -m 'Description of changes'.
+Push the changes to your branch: git push origin feature-name.
+Open a pull request with a detailed description of your changes.
+ 
+## Contact
+For any inquiries or feedback, please contact [Crhistian Ramos Lopez] at [crhistianramos91@gmail.com].
+
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.

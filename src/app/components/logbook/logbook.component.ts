@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LogbookComponent implements OnInit {
   logs: any[] = [];
   isLoggedIn: boolean = false;
-  displayedColumns: string[] = ['service', 'timestamp', 'characterId']; // Agrega las columnas que quieras mostrar
+  displayedColumns: string[] = ['service', 'timestamp', 'characterId'];
 
   constructor(private logService: LogService, private authService: AuthService, private router: Router) { }
 
