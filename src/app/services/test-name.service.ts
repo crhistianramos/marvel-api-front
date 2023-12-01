@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class TestNameService {
 
-  private testName = 'Hola Platzi';
+  private testName = 'Marvel-Api';
 
   constructor() { }
 

@@ -2,11 +2,13 @@
 
 .login-container {
     max-width: 300px;
-    margin: auto;
+    margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: #ccc;
   }
   
   .form-group {
@@ -26,11 +28,33 @@
   }
   
   button {
-    background-color: #4caf50;
-    color: white;
+    background-color: #e74c3c;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Impact;
   }
+
+  h2{
+    margin-bottom: 0;
+    font-family: Impact;
+    font-size: 3.5em;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #ab2424;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    text-align: center;
   
+     background: linear-gradient(transparent 80%, rgb(84, 82, 82) 80%);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    
+    text-shadow: 2px 2px 4px rgba(244, 235, 235, 0.5);
+  }
