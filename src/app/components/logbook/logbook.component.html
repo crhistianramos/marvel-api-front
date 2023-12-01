@@ -1,18 +1,33 @@
 <!-- logbook.component.html -->
-<div class="log-entry-list-container">
-  <ul>
-    <br>
-    <h1>Bitacora de consultas</h1>
-    <br>
-    <li *ngFor="let log of logs" class="log-entry-card">
-      <div class="log-entry-content">
-        <p>Servicio de proveniencia: {{ log.service }}</p>
-        <p>Fecha y hora de registro: {{ log.timestamp | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
-        <p>Id personaje: {{ log.characterId }}</p>
-      </div>
-    </li>
-  </ul>
-</div>
+<br>
+<h1>Bitácora de Consultas</h1>
+<br>
+<div class="popup-container">
+  <div *ngIf="logs.length > 0" class="log-entry-list-container">
+    <table mat-table [dataSource]="logs" class="mat-elevation-z8">
+      <!-- Columna de servicio -->
+      <ng-container matColumnDef="service">
+        <th mat-header-cell *matHeaderCellDef>Servicio de consulta</th>
+        <td mat-cell *matCellDef="let log">{{ log.service }}</td>
+      </ng-container>
 
-<!-- Muestra el componente de inicio de sesión solo si el usuario no ha iniciado sesión -->
-<app-login *ngIf="!isLoggedIn"></app-login>
+      <!-- Columna de timestamp -->
+      <ng-container matColumnDef="timestamp">
+        <th mat-header-cell *matHeaderCellDef>Fecha y Hora de Registro</th>
+        <td mat-cell *matCellDef="let log">{{ log.timestamp | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+      </ng-container>
+
+      <!-- Columna de ID de personaje -->
+      <ng-container matColumnDef="characterId">
+        <th mat-header-cell *matHeaderCellDef>ID Personaje</th>
+        <td mat-cell *matCellDef="let log">{{ log.characterId }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div *ngIf="logs.length === 0" class="no-logs-message">
+    <p>No hay registros disponibles.</p>
+  </div>
+</div>

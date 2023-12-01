@@ -3,6 +3,7 @@ import { LogService } from 'src/app/services/logbook.service';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
+
 @Component({
   selector: 'app-logbook',
   templateUrl: './logbook.component.html',
@@ -11,6 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LogbookComponent implements OnInit {
   logs: any[] = [];
   isLoggedIn: boolean = false;
+  displayedColumns: string[] = ['service', 'timestamp', 'characterId']; // Agrega las columnas que quieras mostrar
 
   constructor(private logService: LogService, private authService: AuthService, private router: Router) { }
 

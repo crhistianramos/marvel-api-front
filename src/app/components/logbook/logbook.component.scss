@@ -1,4 +1,4 @@
-/* popup.component.scss */
+/* logbook.component.scss */
 .popup-container {
   max-height: 65vh;
   margin: 0 auto; 
@@ -17,7 +17,6 @@
   border-radius: 10px;
   margin-bottom: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
-
 }
 
 .log-entry-content {
@@ -38,9 +37,27 @@ h1 {
   text-transform: none;
   text-align: center;
 
-   background: linear-gradient(transparent 80%, rgb(84, 82, 82) 80%);
+  background: linear-gradient(transparent 80%, rgb(84, 82, 82) 80%);
   background-clip: text;
   -webkit-background-clip: text; 
   
   text-shadow: 2px 2px 4px rgba(244, 235, 235, 0.5);
+}
+
+.mat-elevation-z8 {
+  width: 60%;
+  margin: 20px auto; 
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 10px; 
+}
+
+.mat-header-row, .mat-row {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+}
+
+.no-logs-message {
+  text-align: center;
+  margin-top: 20px;
 }
